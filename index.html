@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Build a Responsive Navbar with HTML & CSS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background-color: #222;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h1, h2 {
+      color: #2c3e50;
+    }
+
+    pre {
+      background-color: #272822;
+      color: #f8f8f2;
+      padding: 15px;
+      overflow-x: auto;
+      border-radius: 5px;
+    }
+
+    a {
+      color: #2980b9;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 14px;
+      margin: 40px 0 20px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Build a Responsive Navbar with HTML & CSS</h1>
+  <p>A beginner-friendly guide to building your first responsive layout</p>
+</header>
+
+<main>
+
+  <h2>🔹 Introduction</h2>
+  <p>A responsive navbar adapts to all screen sizes, providing a smooth user experience on desktop and mobile. In this tutorial, you'll learn to create a simple, responsive navigation bar using HTML and CSS—no JavaScript required!</p>
+
+  <h2>🔹 What You’ll Learn</h2>
+  <ul>
+    <li>HTML structure for a navbar</li>
+    <li>Styling with CSS and Flexbox</li>
+    <li>Responsive layout with media queries</li>
+  </ul>
+
+  <h2>🔹 Step 1: HTML Structure</h2>
+  <p>Create a file called <strong>index.html</strong> and add the following code:</p>
+  <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Responsive Navbar&lt;/title&gt;
+  &lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;nav class="navbar"&gt;
+    &lt;div class="logo"&gt;CodeWithDeepesh&lt;/div&gt;
+    &lt;ul class="nav-links"&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Tutorials&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Projects&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+  <h2>🔹 Step 2: CSS Styling</h2>
+  <p>Create a file called <strong>style.css</strong> and style the navbar using Flexbox:</p>
+  <pre><code>body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #333;
+  padding: 1rem 2rem;
+  color: white;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}</code></pre>
+
+  <h2>🔹 Step 3: Make It Responsive</h2>
+  <p>To hide the menu on smaller screens (below 600px), add this media query:</p>
+  <pre><code>@media (max-width: 600px) {
+  .nav-links {
+    display: none;
+  }
+}</code></pre>
+
+  <p>✔️ Now, when you shrink the screen, the nav items disappear — this sets up the base for a mobile hamburger menu (which you can add later with JavaScript).</p>
+
+  <h2>🔹 Live Demo</h2>
+  <p>Try opening the HTML file in your browser and resizing the window. The nav items will disappear on smaller screens.</p>
+
+  <h2>🔹 What’s Next?</h2>
+  <ul>
+    <li>Add a <strong>hamburger menu</strong> with JavaScript</li>
+    <li>Style the nav for tablets too (e.g., 768px)</li>
+    <li>Build a full responsive landing page using this navbar</li>
+  </ul>
+
+  <h2>🔗 Resources</h2>
+  <ul>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex">CSS Flexbox - MDN Docs</a></li>
+    <li><a href="https://web.dev/learn/design/responsive/">Responsive Design Basics - Google Devs</a></li>
+  </ul>
+
+</main>
+
+<footer>
+  &copy; 2025 CodeWithDeepesh | Built with 💻 and ☕
+</footer>
+
+</body>
+</html>
